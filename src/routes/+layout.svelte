@@ -12,10 +12,13 @@
             <a href="/" class:active={path === "/"}>Home</a>
             <a href="/about" class:active={path === "/about"}>About</a>
             <a href="/projects" class:active={path === "/projects"}>Projects</a>
-            <a href="/cv.pdf" target="_blank">CV</a>
-            <a href="/contact" class:active={path === "/contact"}>Contact</a>
             <button>*</button>
         </nav>
+        <div>
+            <a href="mailto:rnba12@yahoo.co.uk">Email</a>
+            <a href="https://github.com/rnba12">GitHub</a>
+            <a href="https://www.linkedin.com/in/russell-ampomah-655667217/">LinkedIn</a>
+        </div>
     </div>
     
     <slot/>
