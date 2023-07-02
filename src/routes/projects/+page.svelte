@@ -4,8 +4,6 @@
     ProjectCard
 </script>
 
-<h1>Projects</h1>
-
 <div class="projects">
     {#each projectList as project}
         <ProjectCard {...project}/>
@@ -17,7 +15,6 @@
         width: 100%;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        justify-items: center;
         gap: 1.2rem 0;
     }
 </style>
