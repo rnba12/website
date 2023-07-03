@@ -59,7 +59,7 @@
     .skills {
         display: grid;
         grid-template-columns: repeat(3, max-content);
-        gap: 0 5rem;
+        gap: 1rem 5rem;
     }
     .header {
         font-weight: 700;
@@ -78,4 +78,11 @@
             color: var(--accent-colour);
         }
     }
+
+    @media only screen and (max-width: 600px) {
+        .skills {
+            grid-template-columns: max-content max-content;
+        }
+    }
+
 </style>

@@ -27,4 +27,15 @@
         grid-template-columns: 1fr 1fr;
         gap: 1.2rem;
     }
+
+    @media only screen and (max-width: 768px) {
+        .projects {
+            grid-template-columns: 1fr;
+        }
+    }
+    @media only screen and (min-width: 1300px) {
+        .projects {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
 </style>
