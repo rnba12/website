@@ -10,7 +10,7 @@ const projectList : {
         name: "Profile Maker",
         description: "A page for displaying coding projects",
         link: "https://profile-maker.vercel.app",
-        github: "https://github.com/profile-maker",
+        github: "https://github.com/rnba12/profile-maker",
         image: "/assets/profilemaker.png",
         technologies: ["Svelte", "Prisma", "PostgreSQL", "Sass", "Supabase"]
     },
