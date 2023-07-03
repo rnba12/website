@@ -1,17 +1,24 @@
 <script lang="ts">
-    import ProjectCard from '../../lib/components/ProjectCard.svelte';
-    import projectList from '../../lib/projects';
+    import ProjectCard from '$lib/components/ProjectCard.svelte';
+    export let data
+
+    const projects = data.projectList
+
 </script>
 
 <svelte:head>
     <title>Projects | Russell Ampomah</title>
 </svelte:head>
 
-<div class="projects">
-    {#each projectList as project}
+{#if projects}
+    <div class="projects">
+    {#each projects as project}
         <ProjectCard {...project}/>
     {/each}
-</div>
+    </div>
+{/if}
+
+
 
 <style lang="scss">
     .projects {
