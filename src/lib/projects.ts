@@ -11,7 +11,7 @@ const projectList : {
         description: "A page for displaying coding projects",
         link: "https://profile-maker.vercel.app",
         github: "https://github.com/profile-maker",
-        image: "src/lib/assets/profilemaker.png",
+        image: "/assets/profilemaker.png",
         technologies: ["Svelte", "Prisma", "PostgreSQL", "Sass", "Supabase"]
     },
     {
@@ -19,7 +19,7 @@ const projectList : {
         description: "A simple game where you guess synonyms",
         link: "https://synonymz.netlify.app/",
         github: "https://github.com/rnba12/synonymz",
-        image: "src/lib/assets/synonymz.png",
+        image: "/assets/synonymz.png",
         technologies: ["React", "JavaScript"]
     },
     {
@@ -27,7 +27,7 @@ const projectList : {
         description: "A Multiplayer quiz game",
         link: "https://voluble-zabaione-2be1b6.netlify.app/",
         github: "https://github.com/mizupp/thewisequacks",
-        image: "src/lib/assets/earlybird.png",
+        image: "/assets/earlybird.png",
         technologies: ["React", "MongoDB", "TailwindCSS", "Socket.io"]
     },
     {
@@ -35,7 +35,7 @@ const projectList : {
         description: "House plant health and tracking app",
         link: "https://main--fanciful-tarsier-29e66b.netlify.app/",
         github: "https://github.com/mizupp/plantastic-four",
-        image: "src/lib/assets/houseyourplant.png",
+        image: "/assets/houseyourplant.png",
         technologies: ["Python", "Flask", "React", "PyTorch", "MongoDB"]
     },
     {
@@ -43,7 +43,7 @@ const projectList : {
         description: "Habit tracking web application",
         link: "https://relaxed-speculoos-a7d774.netlify.app/client/login.html",
         github: "https://github.com/JLP2000/habitual-client",
-        image: "src/lib/assets/habitual.png",
+        image: "/assets/habitual.png",
         technologies: ["HTML5", "CSS3", "JavaScript", "PostgreSQL"]
     },
     {
@@ -51,7 +51,7 @@ const projectList : {
         description: "London based community journalling site",
         link: "https://coruscating-dasik-fbf1c6.netlify.app/html/home.html",
         github: "https://github.com/adamminchella/see-it-say-it",
-        image: "/src/lib/assets/seeitsayit.png",
+        image: "/assets/seeitsayit.png",
         technologies: ["HTML5", "CSS3", "JavaScript"]
     },
     {
@@ -59,7 +59,7 @@ const projectList : {
         description: "A github repository tracker",
         link: null,
         github: "https://github.com/shedp/GithubTrackerReact",
-        image: "src/lib/assets/githubtracker.png",
+        image: "/assets/githubtracker.png",
         technologies: ["React", "JavaScript", "Redux"]
     },
     {
@@ -67,7 +67,7 @@ const projectList : {
         description: "Anonymous note taking app. Clone of telegra.ph",
         link: null,
         github: "https://github.com/rnba12/post_it",
-        image: "src/lib/assets/postit.png",
+        image: "/assets/postit.png",
         technologies: ["HTML5", "CSS3", "JavaScript", "MongoDB", "Jest"]
     },
 ]
