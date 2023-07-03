@@ -105,7 +105,7 @@
         align-items: center;
         gap: 5px;
         &:hover {
-            color: rgb(0, 115, 255);
+            color: var(--accent-colour);
         }
         transition: all 0.1s;
        }

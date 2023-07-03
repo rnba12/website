@@ -7,6 +7,16 @@
 
 </script>
 
+<svelte:head>
+    <script>
+        let darkTheme = JSON.parse(localStorage.getItem("darkTheme")) || false
+        darkTheme 
+            ? document.documentElement.classList.add("dark-theme")
+            : document.documentElement.classList.remove("dark-theme")
+                
+    </script>
+</svelte:head>
+
 <div class="page">
     <div class="sidebar">
         <nav>
@@ -56,7 +66,7 @@
             font-size: 1.5rem;
             font-weight: 600;
             &.active, &:hover {
-                color: rgb(0, 115, 255);
+                color: var(--accent-colour);
             }
             transition: all 0.1s;
         }
@@ -64,10 +74,6 @@
 
     .nav-bottom {
         margin-top: auto;
-        .footer {
-            display: inline-flex;
-            align-items: center;
-        }
     }
 
     .links {

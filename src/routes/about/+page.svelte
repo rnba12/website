@@ -75,7 +75,7 @@
         font-weight: 600;
         transition: all 0.1s;
         &:hover {
-            color: rgb(0, 115, 255);
+            color: var(--accent-colour);
         }
     }
 </style>

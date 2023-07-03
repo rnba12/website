@@ -3,9 +3,10 @@
 :root {
     --background-colour: #ffffff;
     --text-colour: #000000;
+    --accent-colour: rgb(0, 115, 255);
 }
 
-[data-theme="dark"] {
+.dark-theme {
     --background-colour: #000000;
     --text-colour: #ffffff;
 }
@@ -15,4 +16,5 @@ body {
     font-family: "Source Sans 3";
     background-color: var(--background-colour);
     color: var(--text-colour);
+    transition: background-color 0.2s;
 }

@@ -10,7 +10,7 @@
 
 <style>
     .name {
-        /* color: rgb(0, 115, 255); */
+        /* color: var(--accent-colour); */
         font-weight: 700;
     }
     h1 {
