@@ -8,12 +8,12 @@
 
 <section class="bio">
     <p style="margin-top: 0;">
-        I graduated last year from the University of York in Electronic Engineering. After completing my degree, I decided I wanted to move into software engineering. I took a course at La Fosse Academy in London to improve my knowledge and work on some projects.
+        I recently graduated from the <b>University of York</b>. After completing my degree, I decided I wanted to move into software engineering. I took a course at <b>La Fosse Academy</b> in London to improve my knowledge and work on some projects.
      </p><p>
-        I can work across the development stack, and I'm always looking to learn new tools and technologies. At the moment i'm looking to gain some commercial experience.
+        I like to work across the full development stack, and I'm always looking to learn new tools and technologies. At the moment i'm looking to gain some commercial experience.
         </p>
     <p>
-        I've spent a lot of time recently making web apps, to learn and test out new tools. If not, im probably watching youtube or being let down by Arsenal.
+        I've spent a lot of time recently making web apps, to learn and test out new tools. If not, im probably at the gym, watching youtube or being let down by Arsenal.
     </p>
 </section>
 
