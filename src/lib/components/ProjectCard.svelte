@@ -41,6 +41,9 @@
                 opacity: 0;
                 z-index: -1;
             }
+            .content {
+                opacity: 1;
+            }
         }
     }
 
@@ -48,14 +51,11 @@
         position: absolute;
         top: 0;
         left: 0;
+        z-index: 3;
         width: 100%;
         height: 100%;
         object-fit: cover;
         border-radius: 28px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 3;
         transition: all 0.2s;
     }
 
@@ -71,8 +71,8 @@
         display: flex;
         flex-direction: column;
         gap: 0.8rem;
-        border: 2px solid rgb(231, 231, 231);
-
+        border: 2px solid rgb(200, 200, 200);
+        opacity: 0;
     }
     .name {
         font-size: 1.3rem;
