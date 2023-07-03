@@ -1,6 +1,4 @@
 <script lang="ts">
-    import { fade } from "svelte/transition";
-
     export let name: string
     export let description: string
     export let image: string
@@ -11,7 +9,7 @@
 
 <div class="project-card">
     <img src={image} alt={name}>
-    <div class="content" transition:fade>
+    <div class="content">
         <div class="name">{name}</div>
         <div class="description">{description}</div>
         <div class="technologies">
@@ -21,7 +19,7 @@
         </div>
         <div class="links">
             {#if link}     
-                <a href={link}><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6m-7 1l9-9m-5 0h5v5"/></svg>{link}</a>
+                <a href={link}><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6m-7 1l9-9m-5 0h5v5"/></svg>Visit</a>
             {/if}
             <br>
             {#if github}     
@@ -36,15 +34,14 @@
         background: inherit;
         position: relative;
         border-radius: 28px;
-        width: 450px;
         height: 280px;
         box-sizing: border-box;
         
         &:focus-within, &:hover {
-            .content {
-                opacity: 1;
+            img {
+                opacity: 0;
+                z-index: -1;
             }
-            border: 1px solid grey;
         }
     }
 
@@ -56,25 +53,27 @@
         height: 100%;
         object-fit: cover;
         border-radius: 28px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        transition: all 0.2s;
     }
 
     .content {
         position: absolute;
         top: 0;
         left: 0;
-        z-index: 3;
         width: 100%;
         height: 100%;
         border-radius: inherit;
         box-sizing: border-box;
         padding: 1rem;
-        color: black;
-        background-color: rgba(255, 255, 255);
         display: flex;
         flex-direction: column;
         gap: 0.8rem;
-        opacity: 0;
-        transition: all 0.1s;
+        border: 2px solid rgb(238, 238, 238);
+
     }
     .name {
         font-size: 1.3rem;
@@ -92,12 +91,12 @@
         span {
             padding: 0.1rem 0.3rem;
             border-radius: 25px;
-            border: 1px solid black;
+            border: 1px solid var(--text-colour);
         }
     }
     .links {
        a {
-        color: black;
+        color: inherit;
         text-decoration: none;
         display: inline-flex;
         align-items: center;

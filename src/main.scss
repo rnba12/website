@@ -5,6 +5,11 @@
     --text-colour: #000000;
 }
 
+[data-theme="dark"] {
+    --background-colour: #000000;
+    --text-colour: #ffffff;
+}
+
 body {
     margin: 0;
     font-family: "Source Sans 3";
