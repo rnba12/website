@@ -24,8 +24,8 @@
 </svelte:head>
 
 <div class="page">
-    <div class="navigation">
-        <button class="menu-btn" on:click={() => showMenu = !showMenu}>
+    <div class="navigation" >
+        <button class="menu-btn" on:click={() => showMenu = !showMenu} >
             {#if !showMenu}
             <svg xmlns="http://www.w3.org/2000/svg" width="2048" height="2048" viewBox="0 0 2048 2048"><path fill="currentColor" d="M0 1408v-128h1920v128H0zm0-896h1920v128H0V512z"/></svg>
             {:else}
@@ -52,7 +52,7 @@
                     <ThemeButton/>
                 </div>
             </div>
-    </div>
+        </div>
     </div>
     
     <div class="content"><slot/></div>
@@ -60,33 +60,21 @@
 
 <style lang="scss">
     .page {
-        display: grid;
-        grid-template-rows: var(--navbar-height) auto;
-        width: 70%;
+        width: 65%;
         margin: auto;
     }
     .navigation {
         position: relative;
     }
     .menu-btn {
-        padding-left: 2rem;
-        padding-top: 2px;
         display: none;
-        background: none;
-        border: none;
-        color: var(--text-colour);
-        height: 100%;
-        svg {
-            width: 30px;
-            height: 30px;
-        }
     }
     .navbar {
         display: flex;
         align-items: center;
         justify-content: space-between;
         box-sizing: border-box;
-        padding: 2rem 0;
+        padding-top: 2rem;
 
         nav {
             display: flex;
@@ -109,13 +97,8 @@
         }
     }
 
-    .nav-bottom {
-        // margin-top: auto;
-    }
-
     .links {
         display: flex;
-        justify-content: space-evenly;
         align-items: center;
         gap: 0.5rem;
         a {
@@ -135,34 +118,37 @@
         box-sizing: border-box;
         overflow-y: auto;
         padding: 2.5rem 0;
-        padding-right: 2rem;
     }
 
     @media only screen and (max-width: 600px) {
-        .menu {
-            display: block !important;
+        .page {
+            width: 100%;
+            margin: 0;
+            height: 100vh;
+            display: grid;
+            grid-template-rows: var(--navbar-height) auto;
+        }
+        .navigation {
+            position: relative;
         }
         .menu-btn {
             display: block;
-        }
-        .page {
-            display: grid;
-            grid-template-columns: none;
-            grid-template-rows: var(--navbar-height) auto;
-            width: 100%;
-            margin: none;
+            height: 100%;
+            padding-left: 2rem;
+            background: none;
+            border: none;
+            color: var(--text-colour); 
+            svg {
+                width: 30px;
+                height: 30px;
+            }
         }
         .navbar {
             padding: 2rem;
             display: none;
-            position: absolute;
-            top: calc(var(--navbar-height) - 1px);
-            left: 0;
-            width: 100%;
-            height: calc(100vh - var(--navbar-height));
+            width: 100%; 
             z-index: 9;
             background-color: var(--background-colour);
-
             nav {
                 flex-direction: column;
                 gap: 0.5rem;
@@ -173,19 +159,27 @@
                         color: var(--accent-colour);
                     }
                 }
-
             }
         }
         .nav-bottom {
             margin-top: 1.5rem;
         }
         .links {
-            flex-direction: row;
             justify-content: start;
             gap: 1rem;
         }
+        .menu {
+            position: absolute;
+            top: var(--navbar-height);
+            width: 100%;
+            height: calc(100vh - var(--navbar-height));    
+            display: block;
+            background-color: var(--background-colour);
+            z-index: 9;
+            padding: 0 2rem;
+        }
         .content {
-            padding-left: 2rem;
+            padding: 2.5rem 2rem;
         }
     }
 </style>
