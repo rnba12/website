@@ -32,7 +32,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="2048" height="2048" viewBox="0 0 2048 2048"><path fill="currentColor" d="m1115 1024l690 691l-90 90l-691-690l-691 690l-90-90l690-691l-690-691l90-90l691 690l691-690l90 90l-690 691z"/></svg>
             {/if}
         </button>
-        <div class="sidebar" class:menu={showMenu}>
+        <div class="navbar" class:menu={showMenu}>
             <nav>
                 <a href="/" class:active={path === "/"}  on:click={() => showMenu = false}>Home</a>
                 <a href="/about" class:active={path === "/about"}  on:click={() => showMenu = false}>About</a>
@@ -61,8 +61,9 @@
 <style lang="scss">
     .page {
         display: grid;
-        grid-template-columns: 20% auto;
-        height: 100vh;
+        grid-template-rows: var(--navbar-height) auto;
+        width: 70%;
+        margin: auto;
     }
     .navigation {
         position: relative;
@@ -80,39 +81,48 @@
             height: 30px;
         }
     }
-    .sidebar {
+    .navbar {
         display: flex;
-        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
         box-sizing: border-box;
-        padding: 2rem;
-        min-height: 100%;
+        padding: 2rem 0;
+
         nav {
             display: flex;
-            flex-direction: column;
             align-items: start;
+            gap: 1rem;
+            a {
+                border-bottom: 2px solid transparent;
+                &.active, &:hover {
+                border-color: var(--accent-colour);
+                // color: var(--accent-colour);
+            }
+            }
         }
         a {
             text-decoration: none;
             color: inherit;
-            font-size: 1.5rem;
-            font-weight: 600;
-            &.active, &:hover {
-                color: var(--accent-colour);
-            }
+            font-size: 1.4rem;
+            font-weight: 500;
             transition: all 0.1s;
         }
     }
 
     .nav-bottom {
-        margin-top: auto;
+        // margin-top: auto;
     }
 
     .links {
         display: flex;
-        flex-direction: column;
         justify-content: space-evenly;
+        align-items: center;
+        gap: 0.5rem;
         a {
             width: min-content;
+            &:hover {
+                color: var(--accent-colour);
+            }
         }
         svg {
             width: 30px;
@@ -139,16 +149,32 @@
             display: grid;
             grid-template-columns: none;
             grid-template-rows: var(--navbar-height) auto;
+            width: 100%;
+            margin: none;
         }
-        .sidebar {
+        .navbar {
+            padding: 2rem;
             display: none;
             position: absolute;
             top: calc(var(--navbar-height) - 1px);
             left: 0;
             width: 100%;
-            min-height: calc(100vh - var(--navbar-height));
+            height: calc(100vh - var(--navbar-height));
             z-index: 9;
             background-color: var(--background-colour);
+
+            nav {
+                flex-direction: column;
+                gap: 0.5rem;
+                a {
+                    // font-weight: 600;
+                    &.active, &:hover {
+                        border-color: transparent;
+                        color: var(--accent-colour);
+                    }
+                }
+
+            }
         }
         .nav-bottom {
             margin-top: 1.5rem;
