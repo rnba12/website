@@ -55,7 +55,7 @@
         </div>
     </div>
     
-    <div class="content"><slot/></div>
+    <main class="content"><slot/></main>
 </div>
 
 <style lang="scss">
@@ -108,8 +108,8 @@
             }
         }
         svg {
-            width: 30px;
-            height: 30px;
+            width: 28px;
+            height: 28px;
         }
     }
 
