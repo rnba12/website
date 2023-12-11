@@ -4,7 +4,7 @@
 
 <h1>Hi, I'm <span class="name">Russell</span></h1>
 
-<h2> I'm a recent grad in Electronic Engineering. I'm currently looking to gain some experience in software development.</h2>
+<h2> I'm an Electronic Engineering grad and software developer.</h2>
 
 <h2>Here you can find out a bit about me and some stuff I've worked on.</h2>
 

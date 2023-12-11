@@ -1,5 +1,5 @@
 {
-    "languages": ["Python", "JavaScript", "HTML", "CSS", "Java", "C#", "SQL"],
-    "frameworks": ["React", "Svelte", ".NET", "Node", "Express", "Flask", "Django"],
-    "tools": ["Git", "GitHub", "Visual Studio", "Docker"]
+    "languages": ["Python", "JavaScript", "Typescript", "HTML", "CSS", "SQL"],
+    "frameworks": ["React", "Svelte", "Node", "Express", "Flask", "Django"],
+    "tools": ["Git", "GitHub", "Docker"]
 }
