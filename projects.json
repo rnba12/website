@@ -6,7 +6,7 @@
     },
     {
         "name": "Early Bird",
-        "description": "A Multiplayer quiz game",
+        "description": "Multiplayer quiz game",
         "link": "https://github.com/mizupp/thewisequacks"
     },
     {
@@ -16,7 +16,7 @@
     },
     {
         "name": "Habitual",
-        "description": "Habit tracking web application",
+        "description": "Habit tracking web app",
         "link": "https://github.com/JLP2000/habitual-client"
     },
     {
@@ -26,7 +26,7 @@
     },
     {
         "name": "Github Tracker",
-        "description": "A github repository tracker",
+        "description": "Github repository tracker",
         "link": "https://github.com/shedp/GithubTrackerReact"
     },
     {
