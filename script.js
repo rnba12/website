@@ -7,13 +7,8 @@ async function loadProjects() {
     projects.forEach(project => {
         const card = projectTemplate.content.cloneNode(true)
         card.querySelector('.name').textContent = project.name
+        card.querySelector('.name').href = project.link
         card.querySelector('.description').textContent = project.description
-        card.querySelector('.github a').href = project.github
-        if (project.link) {
-            card.querySelector('.link a').href = project.link
-        } else {
-            card.querySelector('.link').remove()
-        }
         list.appendChild(card) 
     })
 }
