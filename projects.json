@@ -1,0 +1,37 @@
+[
+    {
+        "name": "Synonymz",
+        "description": "Simple game where you guess synonyms",
+        "link": "https://synonymz.netlify.app/"
+    },
+    {
+        "name": "Early Bird",
+        "description": "Multiplayer quiz game",
+        "link": "https://github.com/mizupp/thewisequacks"
+    },
+    {
+        "name": "House Your Plant",
+        "description": "House plant health and tracking app",
+        "link": "https://github.com/mizupp/plantastic-four"
+    },
+    {
+        "name": "Habitual",
+        "description": "Habit tracking web app",
+        "link": "https://github.com/JLP2000/habitual-client"
+    },
+    {
+        "name": "See It Say It",
+        "description": "London based community journalling site",
+        "link": "https://github.com/adamminchella/see-it-say-it"
+    },
+    {
+        "name": "Github Tracker",
+        "description": "Github repository tracker",
+        "link": "https://github.com/shedp/GithubTrackerReact"
+    },
+    {
+        "name": "Post_It",
+        "description": "Anonymous note taking app. Clone of telegra.ph",
+        "link": "https://github.com/rnba12/post_it"
+    }
+]
