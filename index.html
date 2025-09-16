@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Russell Ampomah</title>
     <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
 </head>
 <body>
     <header>
@@ -36,5 +35,19 @@
             <div class="description"></div>
         </li>
     </template>
+    <script type="module">
+        const projects = await (await fetch('./projects.json')).json();
+
+        const list = document.getElementById('projects-list');
+        const projectTemplate = document.getElementById('project-template');
+
+        projects.forEach(project => {
+            const card = projectTemplate.content.cloneNode(true)
+            card.querySelector('.name').textContent = project.name
+            card.querySelector('.name').href = project.link
+            card.querySelector('.description').textContent = project.description
+            list.appendChild(card) 
+        });
+    </script>
 </body>
 </html>
