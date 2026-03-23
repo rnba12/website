@@ -9,7 +9,7 @@
     --text-colour: rgb(170, 170, 170);
     --accent-colour: rgb(0, 123, 255);
 
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 body {
@@ -23,8 +23,8 @@ body {
     margin: auto;
 }
 
-header {
-    margin-bottom: 3rem;
+main {
+    margin-top: 6.5rem;
 }
 
 h1 {
@@ -59,30 +59,12 @@ a {
     }
 }
 
-h2 {
-    color: var(--heading-colour);
-    font-size: 1.1rem;
-}
-
-#projects-list {
-    padding: 0;
-}
-
-.project {
-    list-style: none;
-    margin-bottom: 25px;
-
-    .name {
-        font-weight: 500;
-        color: var(--heading-colour);
-        margin-bottom: 0.2rem;
-
-        &:hover {
-            color: var(--accent-colour);
-        }
-    }
-    .description {
-        color: var(--text-colour);
+@media (max-width: 500px) {
+    :root {
         font-size: 0.9rem;
+    }
+    
+    main {
+        margin-top: 8rem;
     }
 }

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+    <main>
         <h1>Russell Ampomah</h1>
         <p id="tagline">Electronic Engineering Grad & Frontend Developer at Smart Communications</p>
         <div id="communications">
@@ -23,31 +23,6 @@
                 </svg>
             </a>
         </div>
-    </header>
-    <main>
-        <h2>Side Projects</h2>
-        <ul id="projects-list"></ul>
     </main>
-
-    <template id="project-template">
-        <li class="project">
-            <a class="name"></a>
-            <div class="description"></div>
-        </li>
-    </template>
-    <script type="module">
-        const projects = await (await fetch('./projects.json')).json();
-
-        const list = document.getElementById('projects-list');
-        const projectTemplate = document.getElementById('project-template');
-
-        projects.forEach(project => {
-            const card = projectTemplate.content.cloneNode(true)
-            card.querySelector('.name').textContent = project.name
-            card.querySelector('.name').href = project.link
-            card.querySelector('.description').textContent = project.description
-            list.appendChild(card) 
-        });
-    </script>
 </body>
 </html>
